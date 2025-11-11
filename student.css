@@ -1,0 +1,84 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Page Title */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Logout Button */
+button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Notices Section */
+.notice-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.notice-container h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Individual Notice Box */
+.notice-box {
+    background: #e3f2fd;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #1e88e5;
+}
+
+/* No Notices Available Message */
+.no-notices {
+    font-size: 1.2rem;
+    color: #777;
+    padding: 15px;
+}
+
+.username-display {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+

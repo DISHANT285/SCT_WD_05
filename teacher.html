@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="teacher.css">
+</head>
+<body>
+    <header>
+        <h1>Teacher Dashboard</h1>
+        <a href="index.html" class="logout">Logout</a>
+    </header>
+
+    <!-- Manage Announcements -->
+    <section class="announcement-form">
+        <h2>Manage Announcements</h2>
+
+        <!-- Dropdown for existing announcements -->
+        <select id="announcementSelect" onchange="loadSelectedAnnouncement()">
+            <option value="">Select an Announcement</option>
+        </select>
+
+        <input type="text" id="announcementTitle" placeholder="Title">
+        <textarea id="announcementContent" placeholder="Content"></textarea>
+
+        <button onclick="addAnnouncement()">Post Announcement</button>
+        <button onclick="editAnnouncement()">Edit Announcement</button>
+        <button onclick="deleteAnnouncement()">Delete Announcement</button>
+
+        <h3>Existing Announcements</h3>
+        <ul id="announcementList"></ul>
+    </section>
+
+    <!-- Manage Notices -->
+    <section class="notice-form">
+        <h2>Manage Notices</h2>
+
+        <!-- Dropdown for existing notices -->
+        <select id="noticeSelect" onchange="loadSelectedNotice()">
+            <option value="">Select a Notice</option>
+        </select>
+
+        <input type="text" id="noticeTitle" placeholder="Title">
+        <textarea id="noticeContent" placeholder="Content"></textarea>
+
+        <button onclick="addNotice()">Post Notice</button>
+        <button onclick="editNotice()">Edit Notice</button>
+        <button onclick="deleteNotice()">Delete Notice</button>
+
+        <h3>Existing Notices</h3>
+        <ul id="noticeList"></ul>
+    </section>
+    
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            displayAnnouncements();
+            displayNotices();
+        });
+    </script>
+</body>
+</html>

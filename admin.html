@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">Admin Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+
+        <!-- Manage Announcements -->
+   <!-- Manage Announcements -->
+<div class="section">
+    <h2>Manage Announcements</h2>
+
+    <!-- Dropdown for selecting an existing announcement -->
+    <select id="announcementSelect" onchange="loadSelectedAnnouncement()">
+        <option value="">Select an Announcement</option>
+    </select>
+
+    <input type="text" id="announcementTitle" placeholder="Title">
+    <textarea id="announcementContent" placeholder="Content"></textarea>
+
+    <button onclick="addAnnouncement()">Add Announcement</button>
+    <button onclick="editAnnouncement()">Edit Announcement</button>
+    <button onclick="deleteAnnouncement()">Delete Announcement</button>
+
+    <div id="announcementBoard"></div>
+</div>
+
+
+        <!-- Manage Notices -->
+        <div class="section">
+            <h2>Manage Notices</h2>
+            
+            <!-- Dropdown for selecting existing notices -->
+            <select id="noticeSelect" onchange="loadSelectedNotice()">
+                <option value="">Select a Notice</option>
+            </select>
+
+            <input type="text" id="noticeTitle" placeholder="Title">
+            <textarea id="noticeContent" placeholder="Content"></textarea>
+
+            <button onclick="addNotice()">Add Notice</button>
+            <button onclick="editNotice()">Edit Notice</button>
+            <button onclick="deleteNotice()">Delete Notice</button>
+
+            <div id="noticeBoard"></div>
+        </div>
+
+        <!-- Manage Users -->
+        <div class="section">
+            <h2>Manage Users</h2>
+
+            <!-- Username Input -->
+            <input type="text" id="username" placeholder="Username">
+
+            <!-- Fields for Adding Users -->
+            <div id="addUserFields">
+                <input type="password" id="password" placeholder="Password">
+                <select id="role">
+                    <option value="">Select Role</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
+            </div>
+
+            <!-- Fields for Reset Password -->
+        <!-- Fields for Reset Password -->
+<div id="resetPasswordFields" style="display: none;">
+    <input type="password" id="newPassword" placeholder="New Password">
+    <button onclick="confirmResetPassword()">Confirm Reset</button>
+</div>
+
+
+            <!-- Buttons for User Management -->
+            <button onclick="addUser()">Add User</button>
+            <button onclick="resetPassword()">Reset Password</button>
+            <button onclick="deleteUser()">Delete User</button>
+
+            <div id="userMessage"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

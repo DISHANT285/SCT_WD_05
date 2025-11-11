@@ -1,0 +1,64 @@
+/* Centering the Login Page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/login.bg.jpeg') no-repeat center center/cover; /* Add your image */
+    font-family: Arial, sans-serif;
+}
+
+/* Login Form Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.8); /* Light transparency for better readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 320px;
+}
+
+/* Form Elements */
+.login-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login Button */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
